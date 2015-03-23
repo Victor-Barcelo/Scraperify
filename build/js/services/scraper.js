@@ -1,0 +1,1 @@
+!function(){var n=function(n){var e=function(e,t,o,c,a){var u=e+t+"/"+o+"/"+encodeURIComponent(c)+"/"+encodeURIComponent(encodeURIComponent(r(a)));return n.get(u).then(function(n){return n.data.nodes})},r=function(n){return n.replace(/.*?:\/\//g,"").replace(/\/$/,"")};return{getNodes:e}};n.$inject=["$http"];var e=angular.module("scraperify");e.factory("scraper",n)}();

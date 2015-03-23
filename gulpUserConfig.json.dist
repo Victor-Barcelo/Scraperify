@@ -1,0 +1,15 @@
+{
+  "ftp": {
+    "host": "",
+    "user": "",
+    "pass": "",
+    "remoteSSHPath": ""
+  },
+  "ssh": {
+    "host":"",
+    "port": ,
+    "username":"",
+    "passphrase":"",
+    "privateKeyPath": ""
+  }
+}

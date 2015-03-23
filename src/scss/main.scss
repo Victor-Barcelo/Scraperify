@@ -1,0 +1,17 @@
+$mainFont: 'Permanent Marker', cursive;
+
+.mainFont {
+  font-family: $mainFont;
+}
+
+#spinner {
+  width: 10%;
+  height: 10%;
+  display: block;
+  margin: auto;
+}
+
+#noResultsGif {
+  display: block;
+  margin: auto;
+}

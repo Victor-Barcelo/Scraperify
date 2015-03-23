@@ -1,0 +1,97 @@
+<div class="clearfix">
+    <div class="container">
+
+        <div class="row">
+            <div class="col-lg-6">
+
+                <form role="form">
+
+                    <div class="form-group">
+                        <label for="InputName">Página web</label>
+
+                        <div class="input-group">
+                            <input type="text" class="form-control" name="InputName" id="InputName" required
+                                   ng-model="main.url">
+                            <span class="input-group-addon"><span class="glyphicon glyphicon glyphicon-globe"
+                                                                  aria-hidden="true"></span></span>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="InputMessage">Selector CSS</label>
+
+                        <div class="input-group">
+                                <textarea name="InputMessage" id="InputMessage" class="form-control" rows="5"
+                                          required ng-model="main.selector"></textarea>
+                                <span class="input-group-addon">
+                                    <span class="glyphicon glyphicon-filter" aria-hidden="true"></span>
+                            </span>
+                        </div>
+                    </div>
+
+                    <div class="row">
+
+                        <div class="col-lg-4">
+                            <div class="form-group">
+                                <label for="InputName">Idioma de la web</label>
+                                <select class="form-control" ng-model="main.selectedLangFrom"
+                                        ng-options="lang as lang.name for lang in main.langFrom">
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-4 col-lg-push-1">
+
+                            <div class="form-group">
+                                <label for="InputName">Idioma de traducción</label>
+                                <select class="form-control" ng-model="main.selectedLangTo"
+                                        ng-options="lang as lang.name for lang in main.langTo">
+                                </select>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <input id='scrapBtn' type="submit" value="Scrap!" class="btn btn-lg btn-info pull-right"
+                           ng-click="main.doClick()">
+
+                    <div class="clearfix"></div>
+
+                </form>
+
+            </div>
+
+            <div class="col-lg-5 col-md-push-1">
+
+                <div ng-if="main.isAjaxRequesting">
+                    <h3 class="mainFont">Scrapeando...</h3>
+                    <img id="spinner"
+                         ng-src="https://d1ow200m9i3wyh.cloudfront.net/img/assets/common/images/loader.gif">
+                </div>
+
+                <div ng-if="!main.isAjaxRequesting">
+                    <div ng-if="main.nodes.length === 0">
+                        <div class="alert alert-danger">
+                            <span class="glyphicon glyphicon-remove"></span><strong> No se han obtenido
+                            resultados.</strong>
+                        </div>
+                        <img id="noResultsGif" ng-src="images/noResults.gif" alt=""/>
+                    </div>
+
+                    <div ng-if="main.nodes.length > 0">
+                        <h3 class="mainFont">Resultados</h3>
+                        <hr>
+                        <ul class="list-group">
+                            <li class="list-group-item" ng-repeat="node in main.nodes track by $index">
+                                <span class="glyphicon glyphicon-triangle-right"></span> {{ node }}
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <!--row-->
+    </div>
+
+</div>

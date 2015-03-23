@@ -1,0 +1,1 @@
+!function(){var n=angular.module("scraperify",["ngRoute"]);n.constant("appConfig",appConfig),n.config(["$routeProvider",function(n){n.when("/main",{templateUrl:"views/main.html",controller:"MainController as main"}).otherwise({redirectTo:"/main"})}])}();
