@@ -1,1 +1,1 @@
-"use strict";var appConfig={baseUrl:"http://localhost/Ng-ex2/build/api/scrape/"};
+"use strict";var appConfig={baseUrl:"http://localhost/Scraperify/build/api/scrape/"};

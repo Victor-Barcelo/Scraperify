@@ -148,7 +148,7 @@ gulp.task('deploy:uploadAll', function () {
         '!build/api/app/cache/**/*',
         '!build/api/vendor/**/*',
         '!build/api/web/bundles/**/*',
-        '!build/api/app/config/routing.yml',
+        //'!build/api/app/config/routing.yml',
         '!build/js/constants.js'
     ];
 
@@ -167,7 +167,7 @@ gulp.task('deploy:uploadConfigs', function () {
     });
 
     var globs = [
-        'deployConfigs/routing.yml',
+        //'deployConfigs/routing.yml',
         'deployConfigs/constants.js',
         'deployConfigs/.htaccess'
     ];
